@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static int material(int[] spaceship){
@@ -44,16 +46,27 @@ public class Main {
     }
     public static void main(String[] args) {
 
+        // Cases given in the task itself
         int[] spaceship0 = {6, 4, 2, 0, 3, 2, 0, 3, 1, 4, 5, 3, 2, 7, 5, 3, 0, 1, 2, 1, 3, 4, 6, 8, 1, 3};
         int[] spaceship1 = {6, 2, 1, 1, 8, 0, 5, 5, 0, 1, 8, 9, 6, 9, 4, 8, 0, 0};
         int[] spaceship2 = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         int[] spaceship3 = {0, 1, 0, 2, 1, 0, 3, 1, 0, 1, 2};
         int[] spaceship4 = {4, 2, 0, 3, 2, 5};
 
-        System.out.println(material(spaceship0));
-        System.out.println(material(spaceship1));
-        System.out.println(material(spaceship2));
-        System.out.println(material(spaceship3));
-        System.out.println(material(spaceship4));
+        // Output of the "input" data and results of the material function
+        System.out.println("Spaceship: " + Arrays.toString(spaceship0));
+        System.out.println("Result of calculations: " + material(spaceship0));
+
+        System.out.println("Spaceship: " + Arrays.toString(spaceship1));
+        System.out.println("Result of calculations: " + material(spaceship1));
+
+        System.out.println("Spaceship: " + Arrays.toString(spaceship2));
+        System.out.println("Result of calculations: " + material(spaceship2));
+
+        System.out.println("Spaceship: " + Arrays.toString(spaceship3));
+        System.out.println("Result of calculations: " + material(spaceship3));
+
+        System.out.println("Spaceship: " + Arrays.toString(spaceship4));
+        System.out.println("Result of calculations: " + material(spaceship4));
     }
 }
