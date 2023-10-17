@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
 
@@ -54,19 +55,31 @@ public class Main {
         int[] spaceship4 = {4, 2, 0, 3, 2, 5};
 
         // Output of the "input" data and results of the material function
-        System.out.println("Spaceship: " + Arrays.toString(spaceship0));
-        System.out.println("Result of calculations: " + material(spaceship0));
 
-        System.out.println("Spaceship: " + Arrays.toString(spaceship1));
-        System.out.println("Result of calculations: " + material(spaceship1));
+        System.out.println("Spaceship 1: " + Arrays.toString(spaceship0));
+        System.out.println("Result of calculations: " + material(spaceship0) + "\n");
 
-        System.out.println("Spaceship: " + Arrays.toString(spaceship2));
-        System.out.println("Result of calculations: " + material(spaceship2));
+        System.out.println("Spaceship 2: " + Arrays.toString(spaceship1));
+        System.out.println("Result of calculations: " + material(spaceship1) + "\n");
 
-        System.out.println("Spaceship: " + Arrays.toString(spaceship3));
-        System.out.println("Result of calculations: " + material(spaceship3));
+        System.out.println("Spaceship 3: " + Arrays.toString(spaceship2));
+        System.out.println("Result of calculations: " + material(spaceship2) + "\n");
 
-        System.out.println("Spaceship: " + Arrays.toString(spaceship4));
-        System.out.println("Result of calculations: " + material(spaceship4));
+        System.out.println("Spaceship 4: " + Arrays.toString(spaceship3));
+        System.out.println("Result of calculations: " + material(spaceship3) + "\n");
+
+        System.out.println("Spaceship 5: " + Arrays.toString(spaceship4));
+        System.out.println("Result of calculations: " + material(spaceship4) + "\n");
+
+        // additional randomly generated case
+        Random rand = new Random();
+        int length = rand.nextInt(15) + 8;
+        int[] spaceshipRandom = new int[length];
+        for (int i = 0; i < length; i++) {
+            spaceshipRandom[i] = rand.nextInt(20);
+        }
+
+        System.out.println("Spaceship randomly generated: " + Arrays.toString(spaceshipRandom));
+        System.out.println("Result of calculations: " + material(spaceshipRandom));
     }
 }
